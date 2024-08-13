@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viwport" content="wwidth=device, initial-scale=1.0" />
+        <title>All Challenges</title>
+    </head>
+    <body>
+        <ul>
+            {% for m in i %}
+                <li><a href="{% url "about-me" m %}">{{ m|title }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
