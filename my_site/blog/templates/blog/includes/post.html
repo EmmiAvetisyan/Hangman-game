@@ -1,0 +1,143 @@
+
+{% load static %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock title %}
+
+{% block content %}
+<article class="post-detail">
+    <h1>{{ post.title }}</h1>
+    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    <div class="post-content">
+        <p>{{ post.excerpt }}</p>
+    </div>
+</article>
+{% endblock %}
+
+{% comment %} {% load static %} {% endcomment %}
+{% comment %} 
+<li>
+    <article class ="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/mountain_hiking.avif" %}" alt="Mountain">
+            <div class="post_content">
+                <h3>Mountain hiking</h3>
+                <p> I love hiking and you should do that.
+                    Come to hiking with me!
+                </p>
+            </div>
+        </a>
+
+    </article>
+</li>
+
+<li>
+    <article class ="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/django.webp" %}" alt="Mountain">
+            <div class="post_content">
+                <h3>Learning Django</h3>
+                <p> I love Django!
+                    Let's learn Django together!
+                </p>
+            </div>
+        </a>
+
+    </article>
+</li>
+
+
+<li>
+    <article class ="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/python.webp" %}" alt="Mountain">
+            <div class="post_content">
+                <h3>Python</h3>
+                <p> Python is the best language i've ever seen!
+                    it's very easy and interesting:
+                </p>
+            </div>
+        </a>
+
+    </article>
+</li>
+
+
+<li>
+    <article class ="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/Ejmiacin.jpg" %}" alt="Mountain">
+            <div class="post_content">
+                <h3>Ejmiacin</h3>
+                <p> I live in Ejmiacin:
+                    I love it very much becouse in Ejmiacin there are many churches!
+                </p>
+            </div>
+        </a>
+
+    </article>
+</li> {% endcomment %}
+{% comment %} {% load static %}
+
+<li>
+    <article class ="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/mountain_hiking.avif" %}" alt="Mountain">
+            <div class="post_content">
+                <h3>Mountain hiking</h3>
+                <p> I love hiking and you should do that.
+                    Come to hiking with me!
+                </p>
+            </div>
+        </a>
+
+    </article>
+</li>
+
+<li>
+    <article class ="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/django.webp" %}" alt="Mountain">
+            <div class="post_content">
+                <h3>Learning Django</h3>
+                <p> I love Django!
+                    Let's learn Django together!
+                </p>
+            </div>
+        </a>
+
+    </article>
+</li>
+
+
+<li>
+    <article class ="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/python.webp" %}" alt="Mountain">
+            <div class="post_content">
+                <h3>Python</h3>
+                <p> Python is the best language i've ever seen!
+                    it's very easy and interesting:
+                </p>
+            </div>
+        </a>
+
+    </article>
+</li>
+
+
+<li>
+    <article class ="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/Ejmiacin.jpg" %}" alt="Mountain">
+            <div class="post_content">
+                <h3>Ejmiacin</h3>
+                <p> I live in Ejmiacin:
+                    I love it very much becouse in Ejmiacin there are many churches!
+                </p>
+            </div>
+        </a>
+
+    </article>
+</li> {% endcomment %}

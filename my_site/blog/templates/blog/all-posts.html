@@ -1,0 +1,58 @@
+ {% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    All My Posts
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/posts.css' %}" />
+    <link rel="stylesheet" href="{% static 'blog/all-posts.css' %}" />
+{% endblock css_files %}
+
+{% block content %}
+<section id="all-posts">
+    <h2>My Collected Posts</h2>
+    <ul>
+        <!-- Include static posts -->
+        {% include "blog/includes/post.html" %}
+
+        <!-- Include dynamic posts -->
+        {% for post in all_posts %}
+            <li>
+                <article class="post">
+                    <a href="{{ post.get_absolute_url }}">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                        <div class="post_content">
+                            <h3>{{ post.title }}</h3>
+                            <p>{{ post.excerpt }}</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
+{% comment %} {% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    All My Posts
+{%endblock title %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/posts.css" %}"/>
+    <link rel="stylesheet" href="{% static "blog/all-posts.css" %}"/>
+{% endblock css_files %}
+
+{% block content %}
+<section id = "all-posts">
+    <h2>My Collected Posts</h2>
+    <ul>
+        {% include "blog/includes/post.html" %}
+    </ul>
+
+</section>
+
+{% endblock %} {% endcomment %}
